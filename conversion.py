@@ -1,5 +1,3 @@
-
-
 def convert_16_to_10(a):
     #a = str
     d = { 
