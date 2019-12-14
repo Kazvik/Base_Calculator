@@ -14,7 +14,7 @@ def division(x, y, b):
     while i < len(x):
         
         if b == 16:
-            a = int(convert_16_to_10(str(a))) * b + int(convert_16_to_10(x[i]))
+            a = int(convert_16_to_10(str(a))) * b + int(x[i])
             rez = rez + str(convert_10_to_16(a // y))
             if rez == "0":
                 rez = ""

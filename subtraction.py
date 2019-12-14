@@ -6,10 +6,6 @@ def subtraction(x, y, base):
     #the function returns the result in a string
     carry = 0
     result = ""
-    
-    if base == 16:
-        convert_to_16(x)
-        convert_to_16(y)
     i = 1
     while i <= len(y):
         if int(x[len(x) - i]) - carry < int(y[len(y) - i]):

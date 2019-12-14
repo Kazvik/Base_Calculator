@@ -6,9 +6,6 @@ def addition(x, y, base):
     #the function returns the result in a string
     result = ""
     carry = 0
-    if base == 16:
-        convert_to_16(x)
-        convert_to_16(y)
     if len(y) > len(x):
         z = y
         y = x

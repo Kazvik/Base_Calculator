@@ -4,9 +4,6 @@ def multiplication(x, y, base):
     
     carry = 0
     result = ""
-    if base == 16:
-        convert_to_16(x)
-        convert_to_16(y)
     y = int(y[0])
     i = len(x) - 1
     while i >= 0:
