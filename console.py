@@ -17,22 +17,39 @@ class Console():
     
     def ui_division(self):
         base = input("Enter the base: ")
-        base = self._validate_integer.validate_integer(base)
+        self._validate_integer(base)
         number1 = input("Enter the first number: ")
-        number2 = input("Enter the second number: ")
-        print(self._calculator.division(number1, number2, base))
+        number2 = input("Enter the second number (one digit): ")
+        print(self._calculator.division(number1, number2, int(base)))
     
     def ui_addition(self):
         base = input("Enter the base: ")
         self._validate_integer(base)
         number1 = input("Enter the first number ")
         number2 = input("Enter the second number ")
-        print(self._calculator.addition(number1, number2, base))
+        print(self._calculator.addition(number1, number2, int(base)))
+    
+    def ui_subtraction(self):
+        base = input("Enter the base: ")
+        self._validate_integer(base)
+        number1 = input("Enter the first number ")
+        number2 = input("Enter the second number ")
+        print(self._calculator.subtraction(number1, number2, int(base)))
+    
+    def ui_multiplication(self):
+        base = input("Enter the base: ")
+        self._validate_integer(base)
+        number1 = input("Enter the first number: ")
+        number2 = input("Enter the second number (one digit): ")
+        print(self._calculator.multiplication(number1, number2, int(base)))
+    
     
     def run(self):
-        
+        print("AUTHOR: KOKOVICS RAZVAN-FLORIN, 914\n")
         commands = {
             "2" : self.ui_addition,
+            "3" : self.ui_subtraction,
+            "4" : self.ui_multiplication,
             "5" : self.ui_division
         }
         while True: 
@@ -46,3 +63,4 @@ class Console():
                 commands[cmd]()
             except Exception as ex:
                 print(str(ex))
+            print("\n\n")

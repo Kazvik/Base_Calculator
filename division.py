@@ -14,13 +14,13 @@ def division(x, y, b):
     while i < len(x):
         
         if b == 16:
-            a = convert_16_to_10(str(a)) * b + convert_16_to_10(x[i])
+            a = int(convert_16_to_10(str(a))) * b + int(convert_16_to_10(x[i]))
             rez = rez + str(convert_10_to_16(a // y))
             if rez == "0":
                 rez = ""
             a = convert_10_to_16(a % y)
         else:
-            a = a * b + int(x[i])
+            a = int(a) * int(b) + int(x[i])
             rez = rez + str(a // y)
             if rez == "0":
                 rez = ""
