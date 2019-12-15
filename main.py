@@ -11,3 +11,4 @@ calculator = Calculator(division, addition, subtraction, multiplication, validat
 console = Console(calculator, validate_integer)
 
 console.run()
+

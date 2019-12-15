@@ -8,7 +8,7 @@ def division(x, y, b):
     a = 0
     rez = ""
     if b == 16:
-        y = convert_16_to_10(y)
+        y = convert_16_to_10(str(y))
     else:
         y = int(y)
     while i < len(x):
@@ -28,5 +28,9 @@ def division(x, y, b):
         i = i + 1
         #print("a " + str(a))
         #print("r " + str(rez))
-    return "Quotient: " + str(rez) + "\n" + "Remainder: " + str(a)
+    if rez == "":
+        rez = "0"
+    l = [rez, a]
+    return l
+    #return "Quotient: " + str(rez) + "\n" + "Remainder: " + str(a)
 
