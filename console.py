@@ -35,7 +35,7 @@ class Console():
         self._validate_integer(base) #check if the base is an integer or not
         number1 = input("Enter the first number: ")
         number2 = input("Enter the second number: ")
-        print(self._calculator.addition(number1, number2, int(base))) #printing and calling the result from the addition on the screen
+        print("Result: " + self._calculator.addition(number1, number2, int(base))) #printing and calling the result from the addition on the screen
     
     def ui_subtraction(self):
         #function that handles input and output of the subtraction
@@ -43,7 +43,7 @@ class Console():
         self._validate_integer(base) #check if the base is an integer or not
         number1 = input("Enter the first number: ")
         number2 = input("Enter the second number: ")
-        print(self._calculator.subtraction(number1, number2, int(base)))#printing and calling the result from the subtraction on the screen
+        print("Result: " + self._calculator.subtraction(number1, number2, int(base)))#printing and calling the result from the subtraction on the screen
     
     def ui_multiplication(self):
         #function that handles input and output of the multiplication
@@ -51,7 +51,7 @@ class Console():
         self._validate_integer(base) #checks if the base is an integer or not
         number1 = input("Enter the first number: ")
         number2 = input("Enter the second number (one digit): ")
-        print(self._calculator.multiplication(number1, number2, int(base)))#printing and calling the result from the multiplication on the screen
+        print("Result: " + self._calculator.multiplication(number1, number2, int(base)))#printing and calling the result from the multiplication on the screen
     
     def ui_convert(self):
         #function that handles the data from a conversion

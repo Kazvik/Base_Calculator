@@ -1,29 +1,34 @@
 
 
 def convert_16_to_10(a):
-    #a = str
-    d = { 
-         "0" : 0,
-         "1" : 1,
-         "2" : 2,
-         "3" : 3,
-         "4" : 4,
-         "5" : 5,
-         "6" : 6,
-         "7" : 7,
-         "8" : 8,
-         "9" : 9,
-         "A" : 10,
-         "B" : 11,
-         "C" : 12,
-         "D" : 13,
-         "E" : 14,
-         "F" : 15
-    }
-    return d[a]
+     #a = str
+     #function that converts a digit letter to it's corresponding numeric digit
+     try:
+          return int(a)
+     except:
+          d = { 
+          "0" : 0,
+          "1" : 1,
+          "2" : 2,
+          "3" : 3,
+          "4" : 4,
+          "5" : 5,
+          "6" : 6,
+          "7" : 7,
+          "8" : 8,
+          "9" : 9,
+          "A" : 10,
+          "B" : 11,
+          "C" : 12,
+          "D" : 13,
+          "E" : 14,
+          "F" : 15
+          }
+          return d[a]
 
 def convert_10_to_16(a):
-    d = { 
+     #function that converts a numeric digit to it's corresponding digit - letter
+     d = { 
          0 : "0",
          1 : "1",
          2 : "2",
@@ -40,8 +45,8 @@ def convert_10_to_16(a):
          13 : "D",
          14 : "E",
          15 : "F"
-    }
-    return d[a]
+     }
+     return d[a]
 
 def convert_to_16(a):
     #function that converts a list 'a' which represents a list of digits in hexa to a list in decimal
@@ -49,6 +54,7 @@ def convert_to_16(a):
         a[i] = convert_16_to_10(a[i])
         
 def rapid_2_to_4(bits):
+     #function that converts a group of two bits to their corresponding value in base 4
      d = {
           "00" : "0",
           "01" : "1",
@@ -58,6 +64,7 @@ def rapid_2_to_4(bits):
      return d[bits]
 
 def rapid_2_to_8(bits):
+     #function that converts a group of 3 bits to their corresponding value in base 8
      d = {
           "000" : "0",
           "001" : "1",
@@ -71,6 +78,7 @@ def rapid_2_to_8(bits):
      return d[bits]
 
 def rapid_2_to_16(bits):
+     #function that converts a group of 4 bits to their corresponding value in base 16
      d = {
           "0000" : "0",
           "0001" : "1",
@@ -92,6 +100,7 @@ def rapid_2_to_16(bits):
      return d[bits]
      
 def rapid_16_to_2(digit):
+     #function that converts a digit in base 16 to it's 4 bits representation in bynary
      d = {
           "0" : "0000",
           "1" : "0001",
@@ -113,6 +122,7 @@ def rapid_16_to_2(digit):
      return d[digit]
 
 def rapid_8_to_2(digit):
+     #function that converts a digit in base 8 to it's 3 bits representation in bynary
      d = {
           "0" : "000",
           "1" : "001",
@@ -126,6 +136,7 @@ def rapid_8_to_2(digit):
      return d[digit]
 
 def rapid_4_to_2(digit):
+     #function that converts a digit in base 4 to it's 2 bits representation in bynary
      d = {
           "0" : "00",
           "1" : "01",

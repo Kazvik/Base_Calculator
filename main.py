@@ -1,3 +1,7 @@
+
+"""
+______________________THE MAIN OF THE PROGRAM___________________________
+"""
 from division import division
 from addition import addition
 from subtraction import subtraction
